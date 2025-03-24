@@ -124,6 +124,7 @@ const VehicleShowcase = () => {
                 onClick={() => setCurrentVideo(item.video)}
                 tabIndex="0"
                 role="button"
+                
                 aria-label={`Show ${item.title} view`}
               >
                 <span className="icon"></span>
