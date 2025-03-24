@@ -1,0 +1,215 @@
+/* Base styling */
+.vehicle-showcase {
+    padding: 2rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Layout */
+.showcase-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Sidebar: Categories */
+.categories {
+    flex: 1;
+    max-width: 300px;
+    padding: 1rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.category {
+    cursor: pointer;
+    padding: 1rem 0;
+    transition: color 0.3s;
+}
+
+.category h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.category p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.category.active h4,
+.category.active p {
+    color: #fff;
+}
+
+/* Preview Section */
+.preview {
+    flex: 2;
+    position: relative;
+    padding: 1rem;
+}
+
+.video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* Play/Pause Button */
+.play-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.play-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Video Options Icons */
+.video-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.video-icon {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.video-icon:hover {
+    transform: scale(1.05);
+}
+
+.video-icon .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.video-icon.active .icon {
+    background: #007bff;
+}
+
+.video-icon p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .showcase-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categories {
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .preview {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    .categories {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .category h4 {
+        font-size: 1.3rem;
+    }
+
+    .category p {
+        font-size: 0.9rem;
+    }
+
+    .video {
+        max-width: 100%;
+    }
+
+    .play-button {
+        font-size: 1.3rem;
+        padding: 0.5rem;
+    }
+
+    .video-icons {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .video-icon .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .video-icon p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h2 {
+        font-size: 1.8rem;
+    }
+
+    .category h4 {
+        font-size: 1.2rem;
+    }
+
+    .category p {
+        font-size: 0.8rem;
+    }
+
+    .play-button {
+        font-size: 1.2rem;
+        padding: 0.4rem;
+    }
+
+    .video-icon .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .video-icon p {
+        font-size: 0.7rem;
+    }
+}
