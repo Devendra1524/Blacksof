@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 450px;
+  overflow: hidden;
+  background-color: #001f3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+
+  .video-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+    max-width: 800px;
+
+    .sub-title {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .heading {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .highlight {
+      color: #5cd6ff !important;
+    }
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .hero-section {
+    .content {
+      .sub-title {
+        font-size: 1.1rem;
+      }
+
+      .heading {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    .content {
+      .sub-title {
+        font-size: 1rem;
+      }
+
+      .heading {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    .content {
+      .sub-title {
+        font-size: 0.9rem;
+      }
+
+      .heading {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
